@@ -1,0 +1,24 @@
+// This is a simple C++ fucntion that helps the user to parse a number
+
+int parse_int(int input1) {
+    
+	std::vector<int> a;
+	std::cout << "Please enter a number: ";
+	std::cin >> input1;
+
+	//Convert the integer to a string
+	std::string number1 = std::to_string(input1);
+
+	// Parsing the string into a vector of integers
+	for(int i = 0; i < number1.size(); i++) {
+		a.push_back(number1[i] - '0');
+	}
+
+	std::cout << "The result is: ";
+	for (int i = 0; i < number1.size(); i++) {
+		std::cout << a.at(i);
+		std::cout << "  ";
+	}
+
+
+}
